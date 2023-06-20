@@ -1,21 +1,19 @@
+/*
+ * File: 1-alphabet.c
+ * Auth: David Eke
+ */
+
 #include "main.h"
 
 /**
- * main - A function that prints the alphabet
- * in lower case
- * Return: 0 (success)
+ * print_alphabet - prints the alphabet in lowercase, followed by a new line.
  */
-
-void print_alphabet(void);
+void print_alphabet(void)
 {
-	int i;
+	char letter;
 
-	i = 'a';
-	while (i <= 'z')
-	{
-		_putchar(i);
-		i++;
-	}
+	for (letter = 'a'; letter <= 'z'; letter++)
+		_putchar(letter);
+
 	_putchar('\n');
-	return (0);
 }
