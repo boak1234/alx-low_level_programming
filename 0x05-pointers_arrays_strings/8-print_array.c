@@ -1,33 +1,30 @@
+/*
+ * File: 8-print_array.c
+ * Auth: boluwatife victor
+ */
+
 #include "main.h"
+#include <stdio.h>
 
 /**
- * puts_half - prints half of a string
- * followed by a new line
- * @str: string to be printed
+ * print_array - Prints an inputted number of elements
+ *               of an array of integers.
+ * @a: The array of integers.
+ * @n: The number of elements to be printed.
  */
-void puts_half(char *str)
+void print_array(int *a, int n)
 {
-	int len, n, i;
+	int index;
 
-	len = 0;
-
-	while (str[len] != '\0')
+	for (index = 0; index < n; index++)
 	{
-		len++;
+		printf("%d", a[index]);
+
+		if (index == n - 1)
+			continue;
+
+		printf(", ");
 	}
 
-	if (len % 2 == 0)
-	{
-		for (i = len / 2; str[i] != '\0'; i++)
-		{
-			_putchar(str[i]);
-		}
-	} else if (len % 2)
-	{
-		for (n = (len - 1) / 2; n < len - 1; n++)
-		{
-			_putchar(str[n + 1]);
-		}
-	}
-	_putchar('\n');
+	printf("\n");
 }
